@@ -2,8 +2,11 @@
 import { UserBloc } from "@modules/user/presentation/User.bloc";
 import { createContext } from "@ui/shared/createContext";
 
-const [plocContext, usePloc] = createContext<UserBloc>();
+const [blocContext, useBloc] = createContext<UserBloc>();
 
-export const useUserPloc = usePloc;
+/**
+ * Using React Context to map the BLoC state to React Components 
+ */
+export const useUserBloc = useBloc;
 
-export const userBlocContext = plocContext;
+export const userBlocContext = blocContext;
