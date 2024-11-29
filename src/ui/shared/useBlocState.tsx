@@ -2,7 +2,7 @@
 import Ploc from "@modules/shared/presentation/Bloc";
 import { useEffect, useState } from "react";
 
-export function usePlocState<S>(ploc: Ploc<S>) {
+export function useBlocState<S>(ploc: Ploc<S>) {
   const [state, setState] = useState(ploc.state);
 
   useEffect(() => {

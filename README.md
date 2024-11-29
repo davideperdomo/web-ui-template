@@ -122,8 +122,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 ## 📧 **Contact**
-For questions or suggestions, reach out to:
-- [Your Name](mailto:your.email@example.com)
-- [GitHub Issues](https://github.com/your-username/web-ui-template/issues) 
+For questions or sug-gestions, reach out to:
+- [David](mailto:daeperdomocr@unal.edu.co)
+- [GitHub Issues](https://github.com/davideperdomo/web-ui-template/issues) 
 
 Happy coding! 🎉

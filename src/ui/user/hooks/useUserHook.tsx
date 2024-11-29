@@ -1,11 +1,15 @@
 "use client"
 import { useState, useEffect } from "react";
-import { User } from "../domain/User.entity";
-import { MockUserRepository } from "../infrastructure/MockUser.repository";
-import { GetUser } from "../application/GetUser.useCase";
+import { User } from "../../../modules/user/domain/User.entity";
+import { MockUserRepository } from "../../../modules/user/infrastructure/MockUser.repository";
+import { GetUser } from "../../../modules/user/application/GetUser.useCase";
 
 const getUser = new GetUser(new MockUserRepository);
 
+/**
+ * Using Custom Hook as the "Presentation Layer" which is responsible of 
+ * comunication with the "Domain" 
+ */
 export const useUser = () => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);

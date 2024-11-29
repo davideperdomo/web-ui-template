@@ -1,22 +1,12 @@
 "use client"
-//import { useUser } from "@modules/user/presentation/useUser";
 import React from "react";
 import UserInfo from "./UserInfo";
-import { usePlocState } from "@ui/shared/usePlocState";
-import { useUserPloc } from "../hooks/useUserBloc";
+import { useBlocState } from "@ui/shared/useBlocState";
+import { useUserBloc } from "../hooks/useUserBloc";
 import { UserStateKind } from "@modules/user/presentation/UserState";
 
 const UserView: React.FC = () => {
-  /* With custom hooks
-  const { user, isLoading, error } = useUser();
-
-  if (isLoading) return <p>Cargando...</p>;
-  if (error) return <p>Error: {error.message}</p>;
-
-  return user ? <UserInfo name={user.name} email={user.email} /> : <p>Usuario no encontrado</p>;
-  */  
-  const state = usePlocState(useUserPloc());
-  console.log('view',{ state })
+  const state = useBlocState(useUserBloc());
 
   if (state.kind === UserStateKind.LoadingUserState) return <p>Cargando...</p>;
   if (state.kind === UserStateKind.ErrorUserState) return <p>Error: {state.error}</p>;
